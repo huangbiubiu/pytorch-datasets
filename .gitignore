@@ -2,3 +2,4 @@
 env/
 DAVIS/davis-master/data/DAVIS/
 .idea/
+*.pyc
