@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="34d100a3-ecbb-42ba-b529-d4f1abc18206" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAVIS/davisDataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/DAVIS/davisDataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAVIS/davisSample.py" beforeDir="false" afterPath="$PROJECT_DIR$/DAVIS/davisSample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +15,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DAVIS/davis-master/data/DAVIS/ImageSets/480p/val.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DAVIS/davis-master/data/DAVIS/ImageSets/480p/trainval.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4500">
@@ -29,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DAVIS/davisDataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            <state relative-caret-position="676">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -41,10 +35,22 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="165">
+                <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DAVIS/davisSample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="-145">
               <caret line="10" column="69" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
               <folding>
                 <element signature="e#65#102#0" expanded="true" />
@@ -90,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env/lib/python3.7/site-packages/torch/utils/data/dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="994">
+            <state relative-caret-position="975">
               <caret line="69" column="57" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="57" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -120,6 +126,7 @@
         <option value="$PROJECT_DIR$/davisSample.py" />
         <option value="$PROJECT_DIR$/DAVIS/davisSample.py" />
         <option value="$PROJECT_DIR$/DAVIS/davisDataset.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -174,45 +181,6 @@
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="DAVIS" type="462c0819:PsiDirectoryNode" />
               <item name="ImageSets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pytorch-datasets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pytorch-datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="DAVIS" type="462c0819:PsiDirectoryNode" />
-              <item name="davis-master" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="DAVIS" type="462c0819:PsiDirectoryNode" />
-              <item name="ImageSets" type="462c0819:PsiDirectoryNode" />
-              <item name="480p" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pytorch-datasets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pytorch-datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="DAVIS" type="462c0819:PsiDirectoryNode" />
-              <item name="davis-master" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="DAVIS" type="462c0819:PsiDirectoryNode" />
-              <item name="Results" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pytorch-datasets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pytorch-datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="DAVIS" type="462c0819:PsiDirectoryNode" />
-              <item name="davis-master" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="DAVIS" type="462c0819:PsiDirectoryNode" />
-              <item name="Results" type="462c0819:PsiDirectoryNode" />
-              <item name="Evaluation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pytorch-datasets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pytorch-datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="DAVIS" type="462c0819:PsiDirectoryNode" />
-              <item name="davis-master" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="DAVIS" type="462c0819:PsiDirectoryNode" />
-              <item name="Results" type="462c0819:PsiDirectoryNode" />
-              <item name="Segmentations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -362,11 +330,9 @@
     <entry file="file://$PROJECT_DIR$/env/lib/python3.7/site-packages/skimage/io/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/example.py">
+    <entry file="file://$PROJECT_DIR$/env/lib/python3.7/site-packages/torch/__init__.pyi">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
+        <state relative-caret-position="-14866" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DAVIS/davis-master/data/DAVIS/ImageSets/480p/val.txt">
@@ -376,6 +342,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4500">
           <caret line="300" column="36" selection-start-line="300" selection-start-column="36" selection-end-line="300" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -398,16 +371,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/lib/python3.7/site-packages/torch/utils/data/dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="994">
+        <state relative-caret-position="975">
           <caret line="69" column="57" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="57" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -415,14 +381,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.7/site-packages/torch/__init__.pyi">
+    <entry file="file://$PROJECT_DIR$/example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14866" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DAVIS/davisSample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="-145">
           <caret line="10" column="69" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
           <folding>
             <element signature="e#65#102#0" expanded="true" />
@@ -430,13 +398,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DAVIS/davis-master/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DAVIS/davisDataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        <state relative-caret-position="676">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
