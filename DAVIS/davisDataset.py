@@ -1,4 +1,5 @@
 from torch.utils.data.dataset import Dataset
+import torch
 import numpy as np
 import os
 import skimage.io
@@ -14,6 +15,9 @@ class DavisDataset(Dataset):
         if self.transform:
             image_x = self.transform(image_x)
             image_y = self.transform(image_y)
+        # print(image_x.shape, image_y.shape)
+        image_x = torch.from_numpy(image_x)
+        image_y = torch.from_numpy(image_y)
         return image_x, image_y
 
     def __len__(self):
