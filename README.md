@@ -5,7 +5,7 @@
     
     
     address: https://davischallenge.org/
-    documentation: DAVIS/DAVIS.docx
+    documentation: DAVIS/README.md
     
     ### have done ###
         davis2016 dataset 

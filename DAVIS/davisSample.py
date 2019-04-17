@@ -1,7 +1,12 @@
+"""
+    该文件用于测试class DavisDataset是否正常工作，当然你可以自己实现。
+"""
+
 # debug
 # from DAVIS.davisDataset import DavisDataset
 
 # runtime
+
 from davisDataset import DavisDataset
 
 from torch.utils.data.dataloader import DataLoader
