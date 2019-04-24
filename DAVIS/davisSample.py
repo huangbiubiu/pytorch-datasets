@@ -7,7 +7,7 @@
 
 # runtime
 
-from davisDataset import DavisDataset
+from .davisDataset import DavisDataset
 
 from torch.utils.data.dataloader import DataLoader
 import matplotlib.pyplot as plt
