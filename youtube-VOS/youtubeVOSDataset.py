@@ -15,7 +15,8 @@ class YoutubeVOSDataset(Dataset):
     def __len__(self):
         pass
 
-    def __init__(self, is_all_frames=False, data_type='train', shuffle=None, root_dir=None, transform=None, num_per=10):
+    def __init__(self, is_all_frames=False, data_type='train', shuffle=None, root_dir=None, transform=None,
+                 num_per=10, is_loss=True):
         """
 
         :param is_all_frames: {True, False} 确认数据是否需要更高的精度
@@ -27,6 +28,8 @@ class YoutubeVOSDataset(Dataset):
         :param transform: 给出了一个diy数据格式的接口，比如flatten(x)
         :param num_per: 指出每条数据的帧数
                         warning: 可能会造成部分数据重复或者部分数据丢失
+        :param is_loss: {True, False} True 代表生成相同帧数的数据时采取丢弃剩余帧数的策略
+                                      False 代表生成相同帧数的数据时采用重复数据的策略
 
         """
         pass
