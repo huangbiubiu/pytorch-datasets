@@ -35,33 +35,31 @@ class YoutubeVOSDataset(Dataset):
         datax_path = os.path.join(data_path, 'JPEGImages', data_dict['id'])
         datax = np.zeros((self.num_per, ))
         for i, key in enumerate(data_dict['file_list']):
-            # print(os.path.join(datax_path, key + '.png'))
             img = skimage.io.imread(os.path.join(datax_path, key+'.jpg'))
+            if self.crop:
+                img = self.crop(img)
             if i == 0:
                 datax = np.zeros(np.append(self.num_per, img.shape))
             datax[i] = img
-            # print(img.shape)
         if self.transform:
             datax = self.transform(datax)
         datax = torch.from_numpy(datax)
         if self.mode == 'train':
             datay_path = os.path.join(data_path, 'Annotations', data_dict['id'])
             for i, key in enumerate(data_dict['file_list']):
-                # print(os.path.join(datay_path, key+'.png'))
                 img = skimage.io.imread(os.path.join(datay_path, key+'.png'))
                 if len(img.shape) == 3:
                     img = img[:, :, 0:3]
-                    print('#')
                 else:
                     img_tmp = np.zeros(np.append(img.shape, 3))
                     img_tmp[:, :, 0] = img
                     img_tmp[:, :, 1] = img
                     img_tmp[:, :, 2] = img
                     img = img_tmp
-                    print(os.path.join(datay_path, key+'.png'))
+                if self.crop:
+                    img = self.crop(img)
                 if i == 0:
                     datay = np.zeros(np.append(self.num_per, img.shape))
-                # print(img.shape)
                 datay[i] = img
             datay = torch.from_numpy(datay)
             return datax, datay, data_dict
@@ -78,13 +76,14 @@ class YoutubeVOSDataset(Dataset):
         return len(self.data_list)
 
     def __init__(self, is_all_frames=False, mode='train', shuffle=None, root_dir=None, transform=None,
-                 num_per=10, is_loss=True):
+                 num_per=10, is_loss=True, crop=None):
 
         """
 
         :param is_all_frames: {True, False} 确认数据是否需要更高的精度
         :param mode: {'train', 'val', 'test'} 选择数据集类型
                         warning: is_all_frames 为 False 时没有 'test' 模式
+                                 is_all_frames 为 True 时没有 'valid' 模式
                         warning: 只有'train' 模式下有 annotations
         :param shuffle: 给出了一个打乱数据的接口，只需提供一个x->f(x)的映射即可
         :param root_dir: 指出数据文件所在的根目录
@@ -96,6 +95,9 @@ class YoutubeVOSDataset(Dataset):
                         warning: 可能会造成部分数据重复或者部分数据丢失
         :param is_loss: {True, False} True 代表生成相同帧数的数据时采取丢弃剩余帧数的策略
                                       False 代表生成相同帧数的数据时采用重复数据的策略
+        :param crop: 裁剪函数，使用dataloader之前需要裁齐所有图片
+                     输入一张图片 (x, y, 3)
+                     输出一张图片 (x', y', z')
 
         """
 
@@ -105,7 +107,7 @@ class YoutubeVOSDataset(Dataset):
         if mode not in ['train', 'val', 'test']:
             raise RuntimeError('Class YoutubeVOSDataset def __init__: incorrect param mode!')
         self.mode = mode
-        if is_all_frames == False and mode == 'test':
+        if (not is_all_frames and mode == 'train') or (is_all_frames and mode == 'val'):
             raise RuntimeError('Class YoutubeVOSDataset def __init__: dataset don\'t have this mode!')
         self.shuffle = shuffle
         if not root_dir:
@@ -117,6 +119,9 @@ class YoutubeVOSDataset(Dataset):
         self.num_per = num_per
         if is_loss not in [True, False]:
             raise RuntimeError('Class YoutubeVOSDataset def __init__: incorrect param is_loss!')
+        if not crop:
+            print('Class YoutubeVOSDataset def __init__: no function crop!')
+        self.crop = crop
 
         middle_path = os.path.join(root_dir, 'YouTubeVOS_2018')
         if is_all_frames:
