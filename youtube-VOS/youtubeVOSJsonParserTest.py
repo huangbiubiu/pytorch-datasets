@@ -2,6 +2,7 @@
 测试 class YoutubeVOSJsonParser
 了解 youtubeVOS的数据结构
 数据结构信息保存在了data_information.txt
+了解 youtubeVOS的图像信息
 """
 # debug
 # from .youtubeVOSJsonParser import YoutubeVOSJsonParser
@@ -9,10 +10,14 @@
 # runtime
 from youtubeVOSJsonParser import YoutubeVOSJsonParser
 
+import os
+import skimage.io
+
 # 控制代码块输出
-flag1 = True
-flag2 = True
+flag1 = False
+flag2 = False
 flag3 = False
+flag4 = True
 
 # 测试train部分的读取
 if flag1:
@@ -99,7 +104,6 @@ if flag2:
         print('    painting_num: ', key, ' count: ', out_painting_num[key])
 
 # 测试get_list方法
-
 if flag3:
     tmp = YoutubeVOSJsonParser('./YouTubeVOS_2018/train/meta.json', mode='train')
     out_list = tmp.get_list()
@@ -116,3 +120,18 @@ if flag3:
             for key2 in out_dict:
                 print(key2, ': ', out_dict[key2])
     print(len(out_list))
+
+# 查看图像信息
+if flag4:
+    tmp = YoutubeVOSJsonParser('./YouTubeVOS_2018/train/meta.json', mode='train')
+    out_list = tmp.get_list()
+    for num, out_dict in enumerate(out_list):
+        img_file = os.path.join('./YouTubeVOS_2018/train', 'JPEGImages', out_dict['id'],
+                                out_dict['file_list'][0]+'.jpg')
+        img = skimage.io.imread(img_file)
+        print(num, ': ', img.shape)
+    for num, out_dict in enumerate(out_list):
+        img_file = os.path.join('./YouTubeVOS_2018/train', 'Annotations', out_dict['id'],
+                                out_dict['file_list'][0] + '.png')
+        img = skimage.io.imread(img_file)
+        print(num, ': ', img.shape)
